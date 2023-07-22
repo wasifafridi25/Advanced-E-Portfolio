@@ -410,12 +410,17 @@ form{
     z-index: -1;
 }
 
+.modal__overlay--visible{
+    z-index: 2;
+}
+
 .modal__overlay--success{
     background-color: #4bb543;
     font-size: 40px;
     text-align: center;
     font-weight: 700;
     padding: 28px;
+    z-index: -1;
 }
 
 .modal__exit{
