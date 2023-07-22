@@ -39,9 +39,7 @@
             >
           </li>
           <li class="nav__link click">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            <a href="#" class="nav__link--anchor"
               ><i class="fas fa-adjust"></i
             ></a>
           </li>
@@ -59,13 +57,25 @@
             Here's a bit more <b class="lavender">about me</b>.
           </p>
           <div class="social__list">
-            <a href="https://www.linkedin.com/in/bhuiyan-shadman-wasif-8b767a184/" target="_blank" class="social__link click">
+            <a
+              href="https://www.linkedin.com/in/bhuiyan-shadman-wasif-8b767a184/"
+              target="_blank"
+              class="social__link click"
+            >
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/wasifafridi25" target="_blank" class="social__link click">
+            <a
+              href="https://github.com/wasifafridi25"
+              target="_blank"
+              class="social__link click"
+            >
               <i class="fab fa-github"></i>
             </a>
-            <a href="./assets/Resume.pdf" target="_blank" class="social__link click">
+            <a
+              href="./assets/Resume.pdf"
+              target="_blank"
+              class="social__link click"
+            >
               <i class="fas fa-file-pdf"></i>
             </a>
           </div>
@@ -74,6 +84,290 @@
       <button class="mail__btn click">
         <i class="fas fa-envelope"></i>
       </button>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a <b class="lavender">frontend software engineer</b> with
+            a strong passion for developing websites with great
+            <b class="lavender">user experiences.</b>
+            <br />
+            I currently work on extremely difficult engineering problems and
+            learn from a team consisting of some of the most
+            <b class="lavender">talented </b>and
+            <b class="lavender">experienced</b> software engineers every
+            day.
+          </p>
+          <div class="modal__language">
+            <div class="language">
+
+                <figure class="language__img--wrapper">
+                    <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                    alt="HTML Logo"
+                    class="language__img"
+                    />
+                </figure>
+                <span class="language__name">HTML</span>
+            </div>
+
+            <div class="language">
+
+                <figure class="language__img--wrapper">
+                    <img
+                    src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                    alt="CSS Logo"
+                    class="language__img"
+                    />
+                </figure>
+                <span class="language__name">CSS</span>
+            </div>
+
+            <div class="language">
+
+                <figure class="language__img--wrapper">
+                    <img
+                    src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                    alt="JavaScript Logo"
+                    class="language__img"
+                    />
+                </figure>
+                <span class="language__name">JavaScript</span>
+            </div>
+
+            <div class="language">
+
+                <figure class="language__img--wrapper">
+                    <img
+                    src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png"
+                    alt="TypeScript Logo"
+                    class="language__img"
+                    />
+                </figure>
+                <span class="language__name">TypeScript</span>
+            </div>
+
+            <div class="language">
+
+                <figure class="language__img--wrapper">
+                    <img
+                    src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png"
+                    alt="Vue Logo"
+                    class="language__img"
+                    />
+                </figure>
+                <span class="language__name">Vue</span>
+            </div>
+
+            <div class="language">
+
+                <figure class="language__img--wrapper">
+                    <img
+                    src="https://cdn.iconscout.com/icon/free/png-256/nuxt-dot-js-3628959-3030184.png"
+                    alt="Nuxt logo"
+                    class="language__img"
+                    />
+                </figure>
+                <span class="language__name">Nuxt</span>
+            </div>
+
+            <div class="language">
+
+                <figure class="language__img--wrapper">
+                    <img
+                    src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                    alt="React Logo"
+                    class="language__img"
+                    />
+                </figure>
+                <span class="language__name">React</span>
+            </div>
+
+            <div class="language">
+
+                <figure class="language__img--wrapper">
+                    <img
+                    src="https://mobx.js.org/img/mobx.png"
+                    alt="MobX Logo"
+                    class="language__img"
+                    alt=""
+                    class="language__img"
+                    />
+                </figure>
+                <span class="language__name">MobX</span>                                            
+            </div>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+            <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+            <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities!</h4>
+            <form action="" id="contact__form">
+                <div class="form__item">
+                    <label class="form__item--label">Name</label>
+                    <input type="text" class="input" name="user_name" required>
+                </div>
+                <div class="form__item">
+                    <label class="form__item--label">Email</label>
+                    <input type="email" class="input" name="user_email" required> 
+                </div>
+                <div class="form__item">
+                    <label class="form__item--label">Message</label>
+                    <textarea type="text" class="input" name="message" required></textarea>
+                </div>
+                <button id="contact__submit" class="form__submit">
+                    Send it my way
+                </button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success">
+                Thanks for your message. Looking forward to speaking to you soon!
+            </div>
+            <i class="fas fa-times modal__exit click"></i>
+        </div>
+      </div>
     </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="lavender">projects</span>
+          </h1>
+          <ul class="project__List">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sale Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
+                    accusamus reiciendis illum saepe. Blanditiis nesciunt
+                    officiis modi ipsum sed odit est molestiae debitis sunt,
+                    assumenda cupiditate consequuntur, ut rem omnis.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/google mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sale Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
+                    accusamus reiciendis illum saepe. Blanditiis nesciunt
+                    officiis modi ipsum sed odit est molestiae debitis sunt,
+                    assumenda cupiditate consequuntur, ut rem omnis.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/chat.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Car Sale Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
+                    accusamus reiciendis illum saepe. Blanditiis nesciunt
+                    officiis modi ipsum sed odit est molestiae debitis sunt,
+                    assumenda cupiditate consequuntur, ut rem omnis.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer__row row">
+          <figure>
+            <img class="footer__logo" src="./assets/my_logo.jpg" alt="" />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href=""
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >GitHub</a
+            >
+            <a
+              href=""
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >LinkedIn</a
+            >
+            <a
+              href=""
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Contact</a
+            >
+            <a
+              href=""
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Resume</a
+            >
+          </div>
+          <div class="footer__copyright">
+            Copyright &copy; 2023 Bhuiyan Shadman Wasif
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
+
