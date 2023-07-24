@@ -6,12 +6,17 @@
   font-family: "Roboto", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 li {
   list-style-type: none;
 }
 
 section{
     background-color: rgb(245, 245, 245);
+    transition: all 300ms ease;
 }
 
 .title{
@@ -28,7 +33,7 @@ p{
 
 .lavender{
     /* color: rgb(119, 91, 163) */
-    color: rgba(140, 55, 245, 0.953)
+    color: rgba(140, 55, 245, 0.953) !important
 }
 
 a{
@@ -126,6 +131,55 @@ input:focus,
 textarea:focus{
     border-color: rgba(140, 55, 245, 0.953);
 }
+
+nav,
+.scroll,
+.header{
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms ease 800ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms ease;
+}
+
+.dark-theme .nav__link--anchor,
+.dark-theme .section__title,
+.dark-theme .title,
+.dark-theme .header__para,
+.dark-theme .fa-adjust{
+    color: white;
+}
+
+.dark-theme section{
+    background-color: #242424;
+}
+
+.dark-theme #personal-logo{
+    filter: none;
+}
+
+.dark-theme .scroll__icon{
+    border-color: white;
+}
+
+.dark-theme .scroll__icon::after, 
+.dark-theme .link__hover-effect--black::after{
+    background-color: white;
+}
+
+.dark-theme .mail__btn{
+    background-color: white;
+    color: #242424;
+}
+
+
+
 
 
 /* 
@@ -276,15 +330,23 @@ nav {
 .modal{
     display: flex;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 52%;
+    left: 45%;
     transform: translate(-50%, -50%);
     width: 90%;
     max-width: 900px;
     height: 530px;
-    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.55);
     border-radius: 20px;
     overflow: hidden;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, box-shadow 500ms, z-index 1000ms ease;
+}
+
+.modal--open .modal{
+    z-index: 60;
+    visibility: visible;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.55);
 }
 
 .modal__half{
@@ -298,11 +360,23 @@ nav {
 
 .modal__about{
     background-color: rgb(245, 245, 245);
+    transform: translateX(-110%);
+    transition: transform 600ms ease-in;
+}
+
+.modal--open .modal__about{
+    transform: translateX(0%);
 }
 
 .modal__contact{
     background-color: #242424;
     color: white;
+    transform: translateX(110%);
+    transition: transform 600ms ease-in;
+}
+
+.modal--open .modal__contact{
+    transform: translateX(0%);
 }
 
 .modal__title{
@@ -399,19 +473,21 @@ form{
     top: 0;
     bottom: 0;
     right: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 
 .modal__overlay--loading{
     background-color: #242424;
     font-size: 80px;
-    z-index: -1;
+    
 }
 
 .modal__overlay--visible{
     z-index: 2;
+    display: flex;
 }
 
 .modal__overlay--success{
@@ -420,8 +496,8 @@ form{
     text-align: center;
     font-weight: 700;
     padding: 28px;
-    z-index: -1;
 }
+
 
 .modal__exit{
     position: absolute;
@@ -566,5 +642,13 @@ footer{
 .footer__copyright{
     color: white;
 }
+
+
+
+/* 
+   
+    SHAPES
+
+*/
 
 

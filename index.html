@@ -44,13 +44,13 @@
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black" onclick="modalToggle()"
               >Contact</a
             >
           </li>
           <li class="nav__link click">
             <a href="#" class="nav__link--anchor"
-              ><i class="fas fa-adjust"></i
+              ><i class="fas fa-adjust" onclick="toggleContrast()"></i
             ></a>
           </li>
         </ul>
@@ -64,7 +64,7 @@
             my drive is fuelled by crafting captivating web applications that
             enhance user experiences.
             <br />
-            Here's a bit more <b class="lavender">about me</b>.
+            Here's a bit more <b class="lavender click" onclick="modalToggle()">about me</b>.
           </p>
           <div class="social__list">
             <a
@@ -91,7 +91,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="modalToggle()">
         <i class="fas fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -215,11 +215,11 @@
           <form onsubmit="contact(event)" id="contact__form">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input type="text" class="input" name="user_name"  />
+              <input type="text" class="input" name="user_name"  required/>
             </div>
             <div class="form__item">
               <label class="form__item--label">Email</label>
-              <input type="email" class="input" name="user_email"  />
+              <input type="email" class="input" name="user_email"  required/>
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
@@ -227,7 +227,7 @@
                 type="text"
                 class="input"
                 name="message"
-                
+                required
               ></textarea>
             </div>
             <button id="contact__submit" class="form__submit">
@@ -240,9 +240,18 @@
           <div class="modal__overlay modal__overlay--success">
             Thanks for your message. Looking forward to speaking to you soon!
           </div>
-          <i class="fas fa-times modal__exit click"></i>
+          <i class="fas fa-times modal__exit click" onclick="modalToggle()"></i>
         </div>
       </div>
+      <img src="./assets/circle.svg" class="shape shape--0">
+      <img src="./assets/squiggly.svg" class="shape shape--1">
+      <img src="./assets/triangle.svg" class="shape shape--2">
+      <img src="./assets/squiggly.svg" class="shape shape--3">
+      <img src="./assets/semi circle.svg" class="shape shape--4">
+      <img src="./assets/triangle.svg" class="shape shape--5">
+      <img src="./assets/circle.svg" class="shape shape--6">
+      <img src="./assets/triangle.svg" class="shape shape--7">
+      <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
       <div class="container">

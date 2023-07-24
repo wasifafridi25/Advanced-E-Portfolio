@@ -2,22 +2,74 @@
 //service_kis2jfh
 //g8nr-JDg7evl8MATD
 
+// const contact = (event) => {
+//     event.preventDefault();
+//     const loading = document.querySelector(".modal__overlay--loading")
+//     const success = document.querySelector(".modal__overlay--success")
+//     loading.classList += " modal__overlay--visible"
+//     emailjs
+//         .sendForm(
+//             'service_kis2jfh',
+//             'template_615iwf6',
+//             event.target, //targetting all the events in the form , the email, name and message
+//             'g8nr-JDg7evl8MATD'
+//         ).then(() => {
+//             throw new Error("error");
+//             loading.classList.remove("modal__overlay--visible")
+//             success.classList += " modal__overlay--visible"
+//         }).catch(() => {
+//             loading.classList.remove("modal__overlay--visible");
+//             alert("Sorry the email service is temporarily unavailable. Please email me at waseefafridi39@gmail.com to contact with me directly!")
+//         })
+    
+    
+//     // setTimeout(() => {
+        
+//     //     console.log('It worked 1')
+//     // }, 1000)
+// }
+
 const contact = (event) => {
     event.preventDefault();
-    // emailjs
-    //     .sendForm(
-    //         'service_kis2jfh',
-    //         'template_615iwf6',
-    //         event.target, //targetting all the events in the form , the email, name and message
-    //         'g8nr-JDg7evl8MATD'
-    //     ).then(() => {
-    //         console.log("this worked!")
-    //     })
     const loading = document.querySelector(".modal__overlay--loading")
     const success = document.querySelector(".modal__overlay--success")
     loading.classList += " modal__overlay--visible"
-    setTimeout(() => {
-        loading.classList.remove("modal__overlay--visible")
-        console.log('It worked 1')
-    }, 1000)
+    emailjs
+        .sendForm(
+            'service_kis2jfh',
+            'template_615iwf6',
+            event.target, //targetting all the events in the form , the email, name and message
+            'g8nr-JDg7evl8MATD'
+        ).then(() => {
+            loading.classList.remove("modal__overlay--visible")
+            success.classList += " modal__overlay--visible"
+        }).catch(() => {
+            loading.classList.remove("modal__overlay--visible");
+            alert("Sorry the email service is temporarily unavailable. Please email me at waseefafridi39@gmail.com to contact with me directly!")
+        })
+    
+}
+
+let isModal = false
+const modalToggle = () => {
+    if (!isModal){
+        isModal = true
+        document.body.classList += " modal--open"
+    }
+    else{
+        isModal = false
+        document.body.classList.remove("modal--open")
+
+    }
+}
+
+let isContrast = false
+const toggleContrast = () => {
+    isContrast = !isContrast
+    if (isContrast){
+        document.body.classList.add("dark-theme")
+    }
+    else{
+        document.body.classList.remove("dark-theme")
+    }
 }
