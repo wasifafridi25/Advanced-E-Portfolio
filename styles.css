@@ -280,9 +280,11 @@ nav {
     border-radius: 50%;
     background-color: #242424;
     color: #fff;
-    position: absolute;
+    position: fixed;
     bottom: 32px;
     right: 40px;
+    z-index: 200;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.28);
 }
 
 .scroll{
@@ -614,6 +616,7 @@ form{
 */
 
 footer{
+    position: relative;
     background-color: #242424;
     display: flex;
     padding: 6% 0;
@@ -691,3 +694,130 @@ footer{
     top: 80vh;
     left: 80vw;
 }
+
+/* 
+    Mobile devices and Tablets
+ */
+
+ @media (max-width: 768px){
+    .title{
+        font-size: 80px;
+    }
+
+    .header__para{
+        font-size: 20px;
+    }
+
+    .modal{
+        top: 0px;
+        left: 0px;
+        transform: none;
+        height: auto;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half{
+        width: 100%;
+    }
+
+    .project{
+        opacity: 1;
+        visibility: visible;
+        transition: all 400ms ease;
+    }
+
+    .modal--open .project{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .shape--4{
+        display: none;
+    }
+ }
+
+ /* Medium phones  */
+
+ @media (max-width: 560px){
+    .project__description{
+        left: 40px
+    }
+
+ }
+
+ @media (max-width: 524px){
+    .footer__copyright{
+        max-width: 300px;
+    }
+ }
+
+ /* Small Phones */
+ @media (max-width: 500px){
+    .title{
+        font-size: 52px;
+    }
+
+    .header__para{
+        font-size: 18px;
+    }
+
+    .nav__link:first-child{
+        display: none;
+    }
+
+    .project__description--para{
+        display: none;
+    }
+
+    .project__description{
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--sub-title{
+        margin-bottom: 12px;
+    }
+
+    .modal__half{
+        padding: 40px;
+    }
+
+    .shape--3,
+    .shape--5{
+        display: none;
+    }
+
+    .footer__copyright{
+        max-width: 300px;
+    }
+ }
+
+ @media (max-width: 415px){
+    .language__img--wrapper{
+        width: 72px;
+    }
+
+    .modal__exit{
+        font-size: 28px;
+        top: 24px;
+        right: 24px
+    }
+
+    .modal__half{
+        padding: 32px;
+    }
+    
+    .footer__copyright{
+        max-width: 250px;
+    }
+ }
+
+ @media (max-width: 350px){
+    .shape--6,
+    .shape--7{
+        display: none
+    }
+ }
