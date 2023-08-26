@@ -739,9 +739,20 @@ footer{
 
  /* Medium phones  */
 
- @media (max-width: 560px){
+ @media (max-width: 707px){
+    .project__description--para{
+        display: none;
+    }
+
     .project__description{
-        left: 40px
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--sub-title{
+        margin-bottom: 12px;
     }
 
  }
@@ -770,16 +781,7 @@ footer{
         display: none;
     }
 
-    .project__description{
-        left: 0;
-        padding: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .project__description--sub-title{
-        margin-bottom: 12px;
-    }
+    
 
     .modal__half{
         padding: 40px;
